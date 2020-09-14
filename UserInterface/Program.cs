@@ -21,7 +21,7 @@ namespace UserInterface
 
 
             Deck n = new Deck(2);
-            n.FillDeck();
+            n.FillDeckWithCards();
             foreach (Card card in n)
             {
                 Console.WriteLine(card);

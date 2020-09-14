@@ -11,28 +11,28 @@ namespace GameCardLib.Classes
     public class Deck : IEnumerable
     {
         private readonly List<Card> _cards;
-        public int DeckMultiplier { get; private set; } = 1; 
+        public int NumberOfDecks { get; private set; } = 1; 
         public static int CardCount { get; private set; }
         public Card this[int index] => _cards[index];
 
         public Deck() => _cards = new List<Card>();
 
-        public Deck(int deckMultiplier)
+        public Deck(int numberOfDecks)
         {
             _cards = new List<Card>();
-            DeckMultiplier = deckMultiplier;
+            NumberOfDecks = numberOfDecks;
         }
 
 
         public void InitializeDeck()
         {
-            FillDeck();
+            FillDeckWithCards();
             Shuffle();
         }
 
-        public void FillDeck()
+        public void FillDeckWithCards()
         {
-            while (DeckMultiplier > 0)
+            while (NumberOfDecks > 0)
             {
                 for (int face = 1; face < 14; face++)
                 {
@@ -43,7 +43,7 @@ namespace GameCardLib.Classes
 
                 
                 }
-                DeckMultiplier--;
+                NumberOfDecks--;
             }
           
             // Hitta ett snyggare sätt att hålla kolla på counten utan att upprepa massa kod i olika metoder
