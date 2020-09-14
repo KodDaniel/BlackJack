@@ -38,6 +38,9 @@ namespace UserInterface
                 {
                     Console.WriteLine(o);
                 }
+
+                Card k = deck[0];
+                Console.WriteLine(k);
             }
 
         }

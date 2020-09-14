@@ -13,7 +13,9 @@ namespace GameCardLib.Classes
         private readonly List<Card> _cards;
         public int NumberOfDecks { get; private set; } = 1; 
         public static int CardCount { get; private set; }
-        public Card this[int index] => _cards[index];
+     
+        // Om index faller utanför listan, undvik exception och returna null istället
+        public Card this[int index] => (index >= _cards.Count || index < 0)? null : _cards[index];
 
         public Deck() => _cards = new List<Card>();
 
