@@ -21,12 +21,11 @@ namespace GameCardLib.Classes
     }
 
 
-    // Privat stödmetod och därför inte med i interfacet 
-    private void Reset()
-    {
-        IsFinisihed = false;
-        Hand = new Hand();
-    }
+    //// Privat stödmetod och därför inte med i interfacet 
+    //private void Reset()
+    //{
+       
+    //}
 
     public override string ToString() =>
         $"PlayerID is: {PlayerID} and player name is {Name}";

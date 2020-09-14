@@ -15,10 +15,10 @@ namespace GameCardLib.Classes
         public Card this[int index] => _cards[index];
 
         public Hand() => _cards = new List<Card>();
-        
 
         public void AddCard(Card card) => _cards.Add(card);
         public void Clear() => _cards.Clear();
+        
 
         public IEnumerator GetEnumerator() => _cards.GetEnumerator();
         IEnumerator IEnumerable.GetEnumerator () => GetEnumerator();
