@@ -49,8 +49,6 @@ namespace GameCardLib.Classes
             // Hitta ett snyggare sätt att hålla kolla på counten utan att upprepa massa kod i olika metoder
             CardCount = _cards.Count;
 
-
-
         }
 
         private void Shuffle() => _cards.Shuffle();
@@ -58,8 +56,7 @@ namespace GameCardLib.Classes
         public IEnumerator GetEnumerator() => _cards.GetEnumerator();
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-        public override string ToString() =>
-            $"Number of cards in deck: {CardCount}";
+
 
 
     }

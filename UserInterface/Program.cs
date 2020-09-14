@@ -20,22 +20,25 @@ namespace UserInterface
             //TODO: Att fixa: Kommentera syftet med varje metod
 
 
-            Deck n = new Deck(2);
-            n.FillDeckWithCards();
-            foreach (Card card in n)
-            {
-                Console.WriteLine(card);
-                
-            }
-
-            Console.WriteLine(Deck.CardCount);
+            SimulateGamePlay.StartGame();
             Console.ReadLine();
 
 
+        }
 
+        public static class SimulateGamePlay
+        {
+            private static Deck deck = new Deck();
+            private static Player player = new Player(1,"Daniel Johansson");
 
-
-
+            public static void StartGame()
+            {
+                deck.InitializeDeck();
+                foreach (Card o in deck)
+                {
+                    Console.WriteLine(o);
+                }
+            }
 
         }
 

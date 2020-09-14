@@ -11,8 +11,8 @@ namespace GameCardLib.Classes
         public EnumSuite Suite { get; }
         public EnumFace EnumFace { get;}
         public string SuiteString { get;}
-        public int Value { get; set; } 
-        public string ValueString { get; set; } 
+        public int Value { get;} 
+        public string ValueString { get; } 
         public bool FaceUp { get; set; }
 
         public Card(EnumSuite suite, EnumFace enumFace)
